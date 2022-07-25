@@ -108,6 +108,7 @@ ul#nav-links {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 12px;
+  padding: 50px;
 }
 
 .pokemon {
@@ -117,7 +118,8 @@ ul#nav-links {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: chocolate;
+  box-shadow: 0 0 10px black;
+  border-radius: 15px;
 }
 
 .pokemon-img {

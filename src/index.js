@@ -1,8 +1,17 @@
 import './style.css';
 import displayPokemons from './displayPokemons.js';
-import fetchApi from './fetchApi.js';
+import fetchApi from './fetchApiPokemon.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const res = await fetchApi();
-  res.forEach((poke) => displayPokemons(poke));
+  const pokemonsArray = res.results  
+  pokemonsArray.forEach(async (pokemon) => {
+    const url = await fetch(pokemon.url)
+    const pokemonUrl = await url.json()
+    displayPokemons(pokemonUrl)
+  });
 });
+
+
+
+
