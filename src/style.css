@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'pokemon-solid';
+  src: url(fonts/Pokemon\ Solid.ttf);
+}
+
+@font-face {
+  font-family: 'pokemon-border';
+  src: url(fonts/Pokemon\ Hollow.ttf);
+}
+
+@font-face {
+  font-family: 'calculator';
+  src: url(fonts/Calculator.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
