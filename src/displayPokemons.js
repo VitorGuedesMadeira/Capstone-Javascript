@@ -45,4 +45,9 @@ export default function displayPokemons(pokemonObject) {
     postLikes(pokeHeart.dataset.pokeId);
     fetchLikes(pokemonObject.forms[0], pokeCounter);
   });
+
+  pokeCommentBtn.addEventListener('click', () => {
+    const modalContainer = document.querySelector('.modal-container');
+    modalContainer.classList.add('show-modal');
+  })
 }

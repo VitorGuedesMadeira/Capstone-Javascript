@@ -117,6 +117,16 @@ ul#nav-links {
   max-width: 900px;
 }
 
+#pokedex-container {
+  display: flex;
+  height: 100vh;
+}
+
+#pokeball-container {
+  display: flex;
+  height: 100vh;
+}
+
 .pokemon {
   grid-column: span 4;
   display: flex;
@@ -167,4 +177,38 @@ ul#nav-links {
 .comment-button:active {
   background-color: #72767a;
   transform: scale(0.9);
+}
+
+.modal-container {
+  background-color: rgb(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.modal-container.show-modal {
+  display: flex;
+}
+
+.modal {
+  background-color: white;
+  height: 500px;
+  width: 500px;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  #pokemon-container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .pokemon {
+    grid-column: span 6;
+  }
 }

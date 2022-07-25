@@ -11,3 +11,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     displayPokemons(pokemonUrl);
   });
 });
+
+document.addEventListener('click', (event) => {
+  const modalContainer = document.querySelector('.modal-container');
+  if (event.target === modalContainer) {
+    modalContainer.classList.remove('show-modal');
+  }
+})
