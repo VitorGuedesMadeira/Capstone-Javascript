@@ -130,7 +130,7 @@ ul#nav-links {
 
 .pokemon-img {
   width: 60%;
-  height: auto;
+  height: 60%;
   max-height: 250px;
 }
 
@@ -152,17 +152,16 @@ ul#nav-links {
 }
 
 .comment-button {
-    background-color: #464b50;
-    color: white;
-    font-weight: 300;
-    font-size: 14px;
-    padding: 10px 40px;
-    border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: -1px 2px 0 black, -4px 6px 0 #00000039;
-    cursor: pointer;
-    width: 20%;
-    height: 30px;
+  background-color: #464b50;
+  color: white;
+  font-weight: 300;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: -1px 2px 0 black, -4px 6px 0 #00000039;
+  cursor: pointer;
+  width: 60%;
+  height: 30px;
 }
 
 .comment-button:active {
