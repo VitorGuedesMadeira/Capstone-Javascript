@@ -1,8 +1,7 @@
-import postLikes from "./fetchApiLikes";
-import getLikes from "./GetLikes";
+import fetchLikes from './fetchApiLikes.js';
+import postLikes from './postApiLikes.js';
 
-export default function displayPokemons(pokemonObject) {  
-
+export default function displayPokemons(pokemonObject) {
   const pokeContainer = document.querySelector('#pokemon-container');
   const pokeCard = document.createElement('div');
   const pokeImg = document.createElement('img');
@@ -19,7 +18,6 @@ export default function displayPokemons(pokemonObject) {
   pokeCard.appendChild(pokeImg);
   pokeImg.className = 'pokemon-img';
   pokeImg.src = pokemonObject.sprites.other.dream_world.front_default;
-;
 
   pokeCard.appendChild(pokeTitle);
   pokeTitle.className = 'pokemon-name';
@@ -32,7 +30,7 @@ export default function displayPokemons(pokemonObject) {
   pokeHeart.dataset.pokeId = pokemonObject.forms[0].name;
 
   pokeLikes.appendChild(pokeCounter);
-  pokeCounter.textContent = '5';
+  // pokeCounter.textContent = '5';
   pokeCounter.className = 'likes-counter';
   pokeLikes.appendChild(pokeCounterText);
   pokeCounterText.textContent = 'likes';
@@ -41,8 +39,10 @@ export default function displayPokemons(pokemonObject) {
   pokeCard.appendChild(pokeCommentBtn);
   pokeCommentBtn.className = 'comment-button';
 
+  setTimeout(() => fetchLikes(pokemonObject.forms[0], pokeCounter), 1000);
+
   pokeHeart.addEventListener('click', () => {
-    postLikes(pokeHeart.dataset.pokeId)
-    getLikes(pokemonObject.forms[0].name)
-  })
+    postLikes(pokeHeart.dataset.pokeId);
+    fetchLikes(pokemonObject.forms[0], pokeCounter);
+  });
 }

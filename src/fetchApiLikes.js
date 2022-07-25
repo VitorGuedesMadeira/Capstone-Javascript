@@ -1,16 +1,13 @@
-const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ewWKj7zRfM05pRAULVITORYQRcA4r/likes/';
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rmtBPEBrkoV0tXGWEWRY/likes/';
 
-const postLikes = async (item1) => {
-  const result = await fetch(url, {
-    method: 'POST',
-    body: JSON.stringify({
-      item_id: item1,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
+const fetchLikes = (pokemon, item) => fetch(url)
+  .then((response) => response.json())
+  .then((likes) => {
+    likes.forEach((pkLike) => {
+      if (pkLike.item_id === pokemon.name) {
+        item.textContent = pkLike.likes;
+      }
+    });
   });
-  return result.text();
-};
 
-export default postLikes;
+export default fetchLikes;
