@@ -241,20 +241,37 @@ ul#nav-links {
   position: relative;
   background-color: #fbf9f4;
   height: 90%;
-  max-height: 720px;
+  max-height: 550px;
   width: 60%;
-  max-width: 700px;
+  max-width: 900px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
   overflow-y: auto;
   z-index: 27;
+  padding: 25px;
+  gap: 50px;
+}
+
+.individual-modal-card {
+  min-height: 500px;
+  min-width: 380px;
+  background-image: url(poison.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.card-pokemon-inside {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 150px;
 }
 
 .poke-img-modal {
-  width: 40%;
+  width: 25%;
   height: auto;
   margin: 0 20%;
 }
@@ -511,6 +528,10 @@ ul#nav-links {
 
   .pokemon {
     grid-column: span 6;
+  }
+
+  .individual-modal-card {
+    display: none;
   }
 
   #pokemon-container.reduce-grid {

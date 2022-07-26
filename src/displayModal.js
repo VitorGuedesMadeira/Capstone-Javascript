@@ -6,22 +6,35 @@ export default function displayModal(pokemonObject) {
   const modal = document.querySelector('.modal');
   modalContainer.appendChild(modal);
   const modalClose = document.createElement('span');
-  modal.appendChild(modalClose);
+  // -----------------------//
+  const modalDiv1 = document.createElement('div');
+  modal.appendChild(modalDiv1);
+  const individualCard = document.createElement('img');
+  individualCard.src = pokemonObject.sprites.other.dream_world.front_default;
+  individualCard.className = 'card-pokemon-inside'
+  modalDiv1.appendChild(individualCard);
+  modalDiv1.className = 'individual-modal-card';
+
+
+  const modalDiv2 = document.createElement('div');
+  modal.appendChild(modalDiv2);
+  // -----------------------//
+  modalDiv2.appendChild(modalClose);
   modalClose.textContent = '✖️';
   modalClose.className = 'modal-close';
-  // -----------------------//
+  //------------------------//
   const pokeImgModal = document.createElement('img');
   pokeImgModal.src = pokemonObject.sprites.other.home.front_default;
   pokeImgModal.classList = 'poke-img-modal';
-  modal.appendChild(pokeImgModal);
+  modalDiv2.appendChild(pokeImgModal);
   // -----------------------//
   const pokeTitle = document.createElement('h3');
-  modal.appendChild(pokeTitle);
+  modalDiv2.appendChild(pokeTitle);
   pokeTitle.textContent = pokemonObject.forms[0].name;
   // -----------------------//
   const typesContainer = document.createElement('div');
   typesContainer.className = 'modal-types';
-  modal.appendChild(typesContainer);
+  modalDiv2.appendChild(typesContainer);
 
   pokemonObject.types.forEach((element) => {
     const pokeType = document.createElement('p');
@@ -32,18 +45,18 @@ export default function displayModal(pokemonObject) {
 
   const commentsTitle = document.createElement('h4');
   const commentsContainer = document.createElement('ul');
-  modal.appendChild(commentsTitle);
+  modalDiv2.appendChild(commentsTitle);
   commentsTitle.textContent = 'Comments';
-  modal.appendChild(commentsContainer);
+  modalDiv2.appendChild(commentsContainer);
   commentsContainer.className = 'comments-container';
 
   const displayComments = () => {
     commentsContainer.innerHTML = '';
     getComments(pokemonObject.forms[0].name).then((modalComments) => {
-      if (modalComments.length !== 0) {
-        commentsTitle.textContent = `Comments (${modalComments.length})`;
-      } else {
+      if (modalComments.length < 1 || modalComments.length === undefined) {
         commentsTitle.textContent = 'Comments(0)';
+      } else {
+        commentsTitle.textContent = `Comments (${modalComments.length})`;
       }
       modalComments.forEach((modComment) => {
         const comment = document.createElement('li');
@@ -69,7 +82,7 @@ export default function displayModal(pokemonObject) {
   const nameInput = document.createElement('input');
   const commentInput = document.createElement('input');
   const submitBtn = document.createElement('button');
-  modal.appendChild(commentsForm);
+  modalDiv2.appendChild(commentsForm);
   commentsForm.className = 'comments-form';
   commentsForm.action = 'submit';
   commentsForm.appendChild(nameInput);
