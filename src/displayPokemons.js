@@ -1,3 +1,5 @@
+import cleanModal from './cleanModal.js';
+import displayModal from './displayModal.js';
 import fetchLikes from './fetchApiLikes.js';
 import postLikes from './postApiLikes.js';
 
@@ -46,8 +48,10 @@ export default function displayPokemons(pokemonObject) {
     fetchLikes(pokemonObject.forms[0], pokeCounter);
   });
 
-  pokeCommentBtn.addEventListener('click', () => {
+  pokeCommentBtn.addEventListener('click', async () => {
     const modalContainer = document.querySelector('.modal-container');
     modalContainer.classList.add('show-modal');
+    await cleanModal();
+    displayModal(pokemonObject);
   })
 }

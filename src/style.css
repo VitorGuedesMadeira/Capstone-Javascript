@@ -126,6 +126,10 @@ ul#nav-links {
 
 #pokedex-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: white;
   height: calc(100vh - 150px);
   background-color: red;
   width: 100%;
@@ -137,6 +141,10 @@ ul#nav-links {
 
 #pokeball-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: white;
   height: calc(100vh - 150px);
   background-color: green;
   width: 100%;
@@ -220,6 +228,10 @@ ul#nav-links {
   height: 500px;
   width: 500px;
   border-radius: 25px;
+}
+
+.poke-img-modal {
+  width: 50%;
 }
 
 @media screen and (max-width: 768px) {
