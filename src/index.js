@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 document.addEventListener('click', (event) => {
   const modalContainer = document.querySelector('.modal-container');
-  if (event.target === modalContainer) {
+  const modalClose = document.querySelector('.modal-close');
+  if (event.target === modalContainer || event.target === modalClose) {
     modalContainer.classList.remove('show-modal');
   }
 });

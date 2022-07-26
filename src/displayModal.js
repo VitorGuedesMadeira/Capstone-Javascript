@@ -5,6 +5,10 @@ export default function displayModal(pokemonObject) {
   const modalContainer = document.querySelector('.modal-container');
   const modal = document.querySelector('.modal');
   modalContainer.appendChild(modal);
+  const modalClose = document.createElement('span');
+  modal.appendChild(modalClose);
+  modalClose.textContent = '✖️';
+  modalClose.className = 'modal-close';
   // -----------------------//
   const pokeImgModal = document.createElement('img');
   pokeImgModal.src = pokemonObject.sprites.other.home.front_default;
@@ -36,6 +40,11 @@ export default function displayModal(pokemonObject) {
   const displayComments = () => {
     commentsContainer.innerHTML = '';
     getComments(pokemonObject.forms[0].name).then((modalComments) => {
+      if (modalComments.length !== 0) {
+        commentsTitle.textContent = `Comments (${modalComments.length})`;
+      } else {
+        commentsTitle.textContent = 'Comments(0)';
+      }
       modalComments.forEach((modComment) => {
         const comment = document.createElement('li');
         commentsContainer.appendChild(comment);
