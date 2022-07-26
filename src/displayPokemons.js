@@ -29,7 +29,7 @@ export default function displayPokemons(pokemonObject) {
   pokeLikes.className = 'pokemon-likes';
   pokeLikes.appendChild(pokeHeart);
   pokeHeart.textContent = '❤️';
-  pokeHeart.classList = 'heart-likes'
+  pokeHeart.classList = 'heart-likes';
   pokeHeart.dataset.pokeId = pokemonObject.forms[0].name;
 
   pokeLikes.appendChild(pokeCounter);
@@ -45,15 +45,17 @@ export default function displayPokemons(pokemonObject) {
   setTimeout(() => fetchLikes(pokemonObject.forms[0], pokeCounter), 1000);
 
   pokeHeart.addEventListener('click', () => {
-    pokeHeart.classList.remove('heart-likes')
+    pokeHeart.classList.remove('heart-likes');
     postLikes(pokeHeart.dataset.pokeId);
-    fetchLikes(pokemonObject.forms[0], pokeCounter);
+    setTimeout(() => fetchLikes(pokemonObject.forms[0], pokeCounter), 700);
   });
 
-  pokeCommentBtn.addEventListener('click', async () => {
-    const modalContainer = document.querySelector('.modal-container');
-    modalContainer.classList.add('show-modal');
-    await cleanModal();
-    displayModal(pokemonObject);
-  })
+  pokeCard.addEventListener('click', async (e) => {
+    if (e.target !== pokeHeart) {
+      const modalContainer = document.querySelector('.modal-container');
+      modalContainer.classList.add('show-modal');
+      await cleanModal();
+      displayModal(pokemonObject);
+    }
+  });
 }

@@ -1,7 +1,7 @@
 import './style.css';
 import displayPokemons from './displayPokemons.js';
 import fetchApi from './fetchApiPokemon.js';
-import spa from './singlePageApp';
+import spa from './singlePageApp.js';
 
 spa();
 document.addEventListener('DOMContentLoaded', async () => {
@@ -19,4 +19,4 @@ document.addEventListener('click', (event) => {
   if (event.target === modalContainer) {
     modalContainer.classList.remove('show-modal');
   }
-})
+});

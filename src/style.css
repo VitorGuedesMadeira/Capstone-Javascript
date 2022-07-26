@@ -155,6 +155,7 @@ ul#nav-links {
 }
 
 .pokemon {
+  cursor: pointer;
   grid-column: span 4;
   display: flex;
   height: 100%;
@@ -211,7 +212,7 @@ ul#nav-links {
 }
 
 .modal-container {
-  background-color: rgb(0, 0, 0, 0.3);
+  background-color: #0000004d;
   position: fixed;
   top: 0;
   left: 0;
@@ -220,6 +221,7 @@ ul#nav-links {
   display: none;
   justify-content: center;
   align-items: center;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
@@ -229,13 +231,88 @@ ul#nav-links {
 
 .modal {
   background-color: white;
-  height: 500px;
-  width: 500px;
+  height: 70%;
+  max-height: 700px;
+  width: 60%;
+  max-width: 700px;
   border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow-y: auto;
 }
 
 .poke-img-modal {
   width: 50%;
+  height: auto;
+  margin: 0 20%;
+}
+
+.modal h3 {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: 80%;
+  text-align: center;
+}
+
+.modal-types {
+  width: 27%;
+  margin: 10px 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-types p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #fecd30;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 3px;
+}
+
+.comments-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  height: 25%;
+}
+
+.comments-form input {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #00000039;
+}
+
+.comments-form textarea {
+  width: 100%;
+  height: 50px;
+  padding-top: 3px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #00000039;
+}
+
+.comments-form button {
+  background-color: #464b50;
+  color: white;
+  font-weight: 300;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: -1px 2px 0 black, -4px 6px 0 #00000039;
+  cursor: pointer;
+  width: 60%;
+  height: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -245,5 +322,15 @@ ul#nav-links {
 
   .pokemon {
     grid-column: span 6;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #pokemon-container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .pokemon {
+    grid-column: span 12;
   }
 }
