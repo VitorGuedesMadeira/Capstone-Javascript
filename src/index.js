@@ -7,6 +7,9 @@ spa();
 document.addEventListener('DOMContentLoaded', async () => {
   const res = await fetchApi();
   const pokemonsArray = res.results;
+  const pokemonsCounter = document.querySelector('#pokemons-counter');
+  pokemonsCounter.textContent = `Pokemons (${pokemonsArray.length})`
+
   pokemonsArray.forEach(async (pokemon) => {
     const url = await fetch(pokemon.url);
     const pokemonUrl = await url.json();

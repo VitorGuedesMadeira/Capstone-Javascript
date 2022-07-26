@@ -33,8 +33,11 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: rgb(0, 0, 0, 0.9);
-  border-bottom: 5px groove red;
   z-index: 9;
+}
+
+nav {
+  border-bottom: 5px groove red;
 }
 
 nav a {
@@ -145,7 +148,7 @@ ul#nav-links {
   align-items: center;
   font-size: 5em;
   color: white;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 155px);
   background-color: green;
   width: 100%;
 }
@@ -424,7 +427,7 @@ ul#nav-links {
   padding: 1%;
   font-size: 5em;
   color: white;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 155px);
   background-image: url(images/main-backgroun-day.jpg);
   background-size: cover;
   background-position: 100% 50%;
@@ -441,7 +444,7 @@ ul#nav-links {
 #pokemon-container.reduce-grid {
   grid-template-columns: 1fr;
   overflow-y: auto;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 155px);
 }
 
 .pokedex-box-image {
