@@ -4,6 +4,7 @@ const navAList = Array.from(navA);
 const pokemons = document.querySelector('#pokemon-container');
 const pokedex = document.querySelector('#pokedex-container');
 const pokeball = document.querySelector('#pokeball-container');
+const pokemonCard = document.querySelector('.pokemon');
 
 navAList.forEach((child) => {
   if (child.classList.contains('first-a')) {
@@ -11,12 +12,16 @@ navAList.forEach((child) => {
       pokemons.classList.remove('hide');
       pokedex.classList.add('hide');
       pokeball.classList.add('hide');
+      pokemons.classList.remove('reduce-grid')
     });
   } else if (child.classList.contains('second-a')) {
     child.addEventListener('click', () => {
       pokedex.classList.remove('hide');
-      pokemons.classList.add('hide');
+      pokemons.classList.remove('hide');
       pokeball.classList.add('hide');
+      pokemons.style.flex = '1';
+      pokedex.style.flex = '4';
+      pokemons.classList.add('reduce-grid')
     });
   } else {
     child.addEventListener('click', () => {
@@ -28,3 +33,4 @@ navAList.forEach((child) => {
 });
 }
 export default spa;
+
