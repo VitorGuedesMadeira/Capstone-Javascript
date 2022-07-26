@@ -188,6 +188,10 @@ ul#nav-links {
   cursor: pointer;
 }
 
+.heart-likes {
+  filter: saturate(0);
+}
+
 .comment-button {
   background-color: #464b50;
   color: white;
