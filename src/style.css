@@ -117,14 +117,30 @@ ul#nav-links {
   max-width: 900px;
 }
 
+#pokemon-container.hide {
+  display: none;
+}
+
 #pokedex-container {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 150px);
+  background-color: red;
+  width: 100%;
+}
+
+#pokedex-container.hide {
+  display: none;
 }
 
 #pokeball-container {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 150px);
+  background-color: green;
+  width: 100%;
+}
+
+#pokeball-container.hide {
+  display: none;
 }
 
 .pokemon {
