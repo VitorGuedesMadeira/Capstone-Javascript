@@ -37,6 +37,9 @@ footer {
 main {
   display: flex;
   justify-content: center;
+  background-image: url(images/pokemon-background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 footer {
@@ -150,8 +153,8 @@ ul#nav-links {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  box-shadow: 0 0 10px black;
   border-radius: 15px;
+  background-image: radial-gradient(rgba(230, 212, 46, 0.466), rgba(32, 10, 141, 0.294));
 }
 
 .pokemon-img {

@@ -17,7 +17,7 @@ export default function displayPokemons(pokemonObject) {
 
   pokeCard.appendChild(pokeImg);
   pokeImg.className = 'pokemon-img';
-  pokeImg.src = pokemonObject.sprites.other.dream_world.front_default;
+  pokeImg.src = pokemonObject.sprites.other['official-artwork'].front_default;
 
   pokeCard.appendChild(pokeTitle);
   pokeTitle.className = 'pokemon-name';
