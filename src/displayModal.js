@@ -97,31 +97,30 @@ export default function displayModal(pokemonObject) {
   modalDiv2.appendChild(commentsContainer);
   commentsContainer.className = 'comments-container';
 
-  const displayComments = () => {
+  const displayComments = async () => {
     commentsContainer.innerHTML = '';
-    getComments(pokemonObject.forms[0].name).then((modalComments) => {
+    const modalComments = await getComments(pokemonObject.forms[0].name)
       if (modalComments.length < 1 || modalComments.length === undefined) {
         commentsTitle.textContent = 'Comments(0)';
       } else {
         commentsTitle.textContent = `Comments (${modalComments.length})`;
-      }
-      modalComments.forEach((modComment) => {
-        const comment = document.createElement('li');
-        commentsContainer.appendChild(comment);
-        const commentDate = document.createElement('p');
-        const commentUser = document.createElement('p');
-        const commentContent = document.createElement('p');
-        comment.appendChild(commentDate);
-        commentDate.textContent = modComment.creation_date;
-        commentDate.className = 'date-comm';
-        comment.appendChild(commentUser);
-        commentUser.className = 'user-name';
-        commentUser.textContent = `${modComment.username}:`;
-        comment.appendChild(commentContent);
-        commentContent.className = 'content-comm';
-        commentContent.textContent = modComment.comment;
+        modalComments.forEach((modComment) => {
+          const comment = document.createElement('li');
+          commentsContainer.appendChild(comment);
+          const commentDate = document.createElement('p');
+          const commentUser = document.createElement('p');
+          const commentContent = document.createElement('p');
+          comment.appendChild(commentDate);
+          commentDate.textContent = modComment.creation_date;
+          commentDate.className = 'date-comm';
+          comment.appendChild(commentUser);
+          commentUser.className = 'user-name';
+          commentUser.textContent = `${modComment.username}:`;
+          comment.appendChild(commentContent);
+          commentContent.className = 'content-comm';
+          commentContent.textContent = modComment.comment;
       });
-    });
+      }
   };
   displayComments();
 
