@@ -1,5 +1,3 @@
-const fetchApiMock = () => {
-    return Promise.resolve({results: [Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10)]})
-  };
+const fetchApiMock = () => Promise.resolve({ results: [1, 2, 3] });
 
 export default fetchApiMock;
