@@ -20,7 +20,7 @@
 click here to see the [live demo](https://vitorguedesmadeira.github.io/Capstone-Javascript/dist/)
 
 ## Project description video
-[link](https://youtu.be/zLjGvqVCOUI)
+[youtube video link](https://youtu.be/zLjGvqVCOUI)
 
 ## Setup
 
