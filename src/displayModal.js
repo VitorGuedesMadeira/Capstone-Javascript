@@ -18,6 +18,12 @@ export default function displayModal(pokemonObject) {
   const pokeName = document.createElement('p');
   pokeName.textContent = pokemonObject.forms[0].name;
   modalDiv1.appendChild(pokeName)
+  // ------TYPES -----------//
+  pokemonObject.types.forEach((element) => {
+  const pokeType = document.createElement('p');
+  pokeType.textContent = element.type.name;
+  modalDiv1.appendChild(pokeType);
+  })
   // ----- ABILITIES -------//
   const abilities = pokemonObject.abilities
   abilities.forEach(ability => {
