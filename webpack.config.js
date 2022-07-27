@@ -14,7 +14,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/template.html',
     }),
-    new MiniCssExtractPlugin(), //npm install --save-dev mini-css-extract-plugin
+    new MiniCssExtractPlugin(), // npm install --save-dev mini-css-extract-plugin
   ],
   output: {
     filename: '[name].bundle.js',

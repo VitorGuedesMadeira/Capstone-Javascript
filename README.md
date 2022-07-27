@@ -14,7 +14,13 @@
 - **Linters Check:** Local and Pull Request Github workflows to check for stylistic errors, bugs and syntax errors in code.
 
 ## Quick view
-Insert Screenshot Here
+![](./src/images/quickView.png)
+
+## Live demo
+click here to see the [live demo](https://vitorguedesmadeira.github.io/Capstone-Javascript/dist/)
+
+## Project description video
+[link](https://youtu.be/zLjGvqVCOUI)
 
 ## Setup
 
