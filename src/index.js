@@ -1,7 +1,7 @@
 import './style.css';
-import displayPokemons from './displayPokemons.js';
-import fetchApi from './fetchApiPokemon.js';
-import spa from './singlePageApp.js';
+import displayPokemons from './displayPokemons';
+import fetchApi from './fetchApiPokemon';
+import spa from './singlePageApp';
 
 spa();
 document.addEventListener('DOMContentLoaded', async () => {
