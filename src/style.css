@@ -240,34 +240,89 @@ ul#nav-links {
 .modal {
   position: relative;
   background-color: #fbf9f4;
-  height: 90%;
   max-height: 550px;
-  width: 60%;
   max-width: 900px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow-y: auto;
   z-index: 27;
   padding: 25px;
-  gap: 50px;
+  gap: 10px;
 }
 
 .individual-modal-card {
   min-height: 500px;
-  min-width: 380px;
-  background-image: url(poison.png);
+  min-width: 355px;
+  background-image: url(cardsImage/incolor.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+}
+
+.individual-modal-card.fire-card {
+  background-image: url(cardsImage/fire.png);
+}
+
+.individual-modal-card.grass-card {
+  background-image: url(cardsImage/grass.png);
+}
+
+.individual-modal-card.poison-card {
+  background-image: url(cardsImage/poison.png);
+}
+
+.individual-modal-card.water-card {
+  background-image: url(cardsImage/water.png);
+}
+
+.individual-modal-card.electric-card {
+  background-image: url(cardsImage/electric.png);
+}
+
+.individual-modal-card.fairy-card {
+  background-image: url(cardsImage/fairy.png);
+}
+
+.individual-modal-card.fight-card {
+  background-image: url(cardsImage/fight.png);
+}
+
+.individual-modal-card.dragon-card {
+  background-image: url(cardsImage/dragon.png);
+}
+
+.individual-modal-card.metal-card {
+  background-image: url(cardsImage/metal.png);
+}
+
+.individual-modal-card.psychiq-card {
+  background-image: url(cardsImage/psychiq.png);
+}
+
+.individual-modal-card.incolor-card {
+  background-image: url(cardsImage/incolor.png);
+}
+
+.individual-modal-card.ice-card {
+  background-image: url(cardsImage/ice.png);
+}
+
+.individual-modal-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-pokemon-inside {
   position: absolute;
-  top: 15%;
+  top: 12%;
   left: 25%;
-  width: 150px;
+  width: 170px;
+  height: 170px;
 }
 
 .poke-img-modal {
@@ -280,22 +335,24 @@ ul#nav-links {
   font-size: 36px;
   font-weight: 600;
   text-transform: capitalize;
-  width: 80%;
+  width: 100%;
   text-align: center;
 }
 
 .modal h4 {
   margin: 20px 0 5px 0;
-  width: 80%;
+  width: 100%;
   text-align: center;
 }
 
 .comments-container {
-  width: 90%;
+  width: 100%;
+  max-height: 150px;
   margin: 5px 0 20px 0;
   background-color: #efefef;
   padding: 10px;
   border-radius: 3px;
+  overflow-y: auto;
 }
 
 .comments-container li {
@@ -331,8 +388,7 @@ ul#nav-links {
 }
 
 .modal-types {
-  width: 27%;
-  margin: 10px 20%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -402,7 +458,7 @@ ul#nav-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   height: 25%;
 }
 
