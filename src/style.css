@@ -130,10 +130,10 @@ ul#nav-links {
 #author1,
 #author2 {
   width: 50%;
-  background-color: #e0e0e0dd;
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+  color: white;
 }
 
 #footer-authors h4 {
@@ -444,7 +444,15 @@ ul#nav-links {
 .water,
 .bug,
 .ground,
-.electric {
+.electric,
+.fairy,
+.metal,
+.psychiq,
+.ice,
+.incolor,
+.ghost,
+.dragon,
+.fight {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
@@ -452,6 +460,51 @@ ul#nav-links {
   padding: 5px 10px 6px;
   margin: 3px;
   border-radius: 3px;
+  color: #fff;
+}
+
+.fight {
+  background-color: #dfc7bf;
+  color: #0b0605;
+}
+
+.dragon {
+  background-color: #8d3417;
+  color: #fff;
+}
+
+.ghost {
+  background-color: #3d2f4f;
+  color: #fff;
+}
+
+.incolor {
+  background-color: #ededed;
+  color: #000;
+}
+
+.ice {
+  background-color: #9feff6;
+  color: #001621;
+}
+
+.psychiq {
+  background-color: #410c62;
+  color: #fff;
+}
+
+.metal {
+  background-color: #848484;
+  color: #fff;
+}
+
+.metal {
+  background-color: #848484;
+  color: #fff;
+}
+
+.fairy {
+  background-color: #ed69c1;
   color: #fff;
 }
 
