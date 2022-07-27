@@ -1,5 +1,5 @@
-import getComments from './getComments.js';
-import postComments from './postComments.js';
+import getComments from './getComments';
+import postComments from './postComments';
 
 export default function displayModal(pokemonObject) {
   const modalContainer = document.querySelector('.modal-container');
@@ -22,8 +22,9 @@ export default function displayModal(pokemonObject) {
   const cardTypesContainer = document.createElement('div');
   const cardTypesTitle = document.createElement('h5');
   modalDiv1.appendChild(cardTypesContainer);
-  cardTypesContainer.className = 'card-types';
+  cardTypesContainer.className = 'card-types-container';
   cardTypesContainer.appendChild(cardTypesTitle);
+  cardTypesTitle.textContent = 'Types:';
 
   pokemonObject.types.forEach((element) => {
     const pokeType = document.createElement('p');
@@ -33,17 +34,31 @@ export default function displayModal(pokemonObject) {
   });
   // ----- ABILITIES -------//
   const { abilities } = pokemonObject;
+  const cardAbilitiesContainer = document.createElement('div');
+  const cardAbilitiesTitle = document.createElement('h5');
+  modalDiv1.appendChild(cardAbilitiesContainer);
+  cardAbilitiesContainer.className = 'card-abilities-container';
+  cardAbilitiesContainer.appendChild(cardAbilitiesTitle);
+  cardAbilitiesTitle.textContent = 'Abilities:';
+
   abilities.forEach((ability) => {
     const pokemonAbility = document.createElement('p');
-    pokemonAbility.textContent = `ability: ${ability.ability.name}`;
-    modalDiv1.appendChild(pokemonAbility);
+    pokemonAbility.textContent = ability.ability.name;
+    cardAbilitiesContainer.appendChild(pokemonAbility);
   });
   // ----- MOVES -----------//
   const { moves } = pokemonObject;
+  const cardMovesContainer = document.createElement('div');
+  const cardMovesTitle = document.createElement('h5');
+  modalDiv1.appendChild(cardMovesContainer);
+  cardMovesContainer.className = 'card-moves-container';
+  cardMovesContainer.appendChild(cardMovesTitle);
+  cardMovesTitle.textContent = 'Moves:';
+
   for (let i = 0; i < 3; i += 1) {
     const pokemonMove = document.createElement('p');
-    pokemonMove.textContent = `move: ${moves[i].move.name}`;
-    modalDiv1.appendChild(pokemonMove);
+    pokemonMove.textContent = moves[i].move.name;
+    cardMovesContainer.appendChild(pokemonMove);
   }
   // -----------------------//
   const modalDiv2 = document.createElement('div');

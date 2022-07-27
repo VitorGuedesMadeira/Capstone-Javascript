@@ -1,7 +1,7 @@
-import cleanModal from './cleanModal.js';
-import displayModal from './displayModal.js';
-import fetchLikes from './fetchApiLikes.js';
-import postLikes from './postApiLikes.js';
+import cleanModal from './cleanModal';
+import displayModal from './displayModal';
+import fetchLikes from './fetchApiLikes';
+import postLikes from './postApiLikes';
 
 export default function displayPokemons(pokemonObject) {
   const pokeContainer = document.querySelector('#pokemon-container');
@@ -33,9 +33,9 @@ export default function displayPokemons(pokemonObject) {
   pokeHeart.dataset.pokeId = pokemonObject.forms[0].name;
 
   pokeLikes.appendChild(pokeCounter);
-  // pokeCounter.textContent = '5';
   pokeCounter.className = 'likes-counter';
   pokeLikes.appendChild(pokeCounterText);
+  pokeCounter.textContent = '0';
   pokeCounterText.textContent = 'likes';
   pokeCommentBtn.textContent = 'comment';
 
