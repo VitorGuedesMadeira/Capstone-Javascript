@@ -14,8 +14,33 @@ export default function displayModal(pokemonObject) {
   individualCard.className = 'card-pokemon-inside';
   modalDiv1.appendChild(individualCard);
   modalDiv1.className = 'individual-modal-card';
-
+  // ----- POKEMON NAME ----//
+  const pokeName = document.createElement('p');
+  pokeName.textContent = pokemonObject.forms[0].name;
+  modalDiv1.appendChild(pokeName);
+  // ------TYPES -----------//
+  pokemonObject.types.forEach((element) => {
+    const pokeType = document.createElement('p');
+    pokeType.textContent = element.type.name;
+    modalDiv1.appendChild(pokeType);
+  });
+  // ----- ABILITIES -------//
+  const { abilities } = pokemonObject;
+  abilities.forEach((ability) => {
+    const pokemonAbility = document.createElement('p');
+    pokemonAbility.textContent = `ability: ${ability.ability.name}`;
+    modalDiv1.appendChild(pokemonAbility);
+  });
+  // ----- MOVES -----------//
+  const { moves } = pokemonObject;
+  for (let i = 0; i < 3; i += 1) {
+    const pokemonMove = document.createElement('p');
+    pokemonMove.textContent = `move: ${moves[i].move.name}`;
+    modalDiv1.appendChild(pokemonMove);
+  }
+  // -----------------------//
   const modalDiv2 = document.createElement('div');
+  modalDiv2.className = 'individual-modal-stats';
   modal.appendChild(modalDiv2);
   // -----------------------//
   modalDiv2.appendChild(modalClose);
@@ -40,6 +65,45 @@ export default function displayModal(pokemonObject) {
     pokeType.textContent = element.type.name;
     pokeType.className = element.type.name;
     typesContainer.appendChild(pokeType);
+    if (pokeType.textContent === 'fire') {
+      modalDiv1.classList.add('fire-card');
+    }
+    if (pokeType.textContent === 'grass') {
+      modalDiv1.classList.add('grass-card');
+    }
+    if (pokeType.textContent === 'electric') {
+      modalDiv1.classList.add('electric-card');
+    }
+    if (pokeType.textContent === 'water') {
+      modalDiv1.classList.add('water-card');
+    }
+    if (pokeType.textContent === 'dragon') {
+      modalDiv1.classList.add('dragon-card');
+    }
+    if (pokeType.textContent === 'ghost') {
+      modalDiv1.classList.add('ghost-card');
+    }
+    if (pokeType.textContent === 'fairy') {
+      modalDiv1.classList.add('fairy-card');
+    }
+    if (pokeType.textContent === 'psychiq') {
+      modalDiv1.classList.add('psychiq-card');
+    }
+    if (pokeType.textContent === 'fight') {
+      modalDiv1.classList.add('fight-card');
+    }
+    if (pokeType.textContent === 'incolor') {
+      modalDiv1.classList.add('incolor-card');
+    }
+    if (pokeType.textContent === 'poison') {
+      modalDiv1.classList.add('poison-card');
+    }
+    if (pokeType.textContent === 'ice') {
+      modalDiv1.classList.add('ice-card');
+    }
+    if (pokeType.textContent === 'metal') {
+      modalDiv1.classList.add('metal-card');
+    }
   });
 
   const commentsTitle = document.createElement('h4');
