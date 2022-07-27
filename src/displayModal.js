@@ -11,10 +11,9 @@ export default function displayModal(pokemonObject) {
   modal.appendChild(modalDiv1);
   const individualCard = document.createElement('img');
   individualCard.src = pokemonObject.sprites.other.dream_world.front_default;
-  individualCard.className = 'card-pokemon-inside'
+  individualCard.className = 'card-pokemon-inside';
   modalDiv1.appendChild(individualCard);
   modalDiv1.className = 'individual-modal-card';
-
 
   const modalDiv2 = document.createElement('div');
   modal.appendChild(modalDiv2);
@@ -22,7 +21,7 @@ export default function displayModal(pokemonObject) {
   modalDiv2.appendChild(modalClose);
   modalClose.textContent = '✖️';
   modalClose.className = 'modal-close';
-  //------------------------//
+  // ------------------------//
   const pokeImgModal = document.createElement('img');
   pokeImgModal.src = pokemonObject.sprites.other.home.front_default;
   pokeImgModal.classList = 'poke-img-modal';
