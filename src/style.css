@@ -50,7 +50,8 @@ main {
 }
 
 footer {
-  background-color: darkorange;
+  background-color: #000000e6;
+  color: rgb(217, 217, 217);
   height: 90px;
 }
 
@@ -117,27 +118,36 @@ ul#nav-links {
 
 #footer-authors {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-#author1,
-#author2 {
-  width: 50%;
+#authors {
+  display: flex;
+  width: 100%;
   font-size: 20px;
   font-weight: 600;
   text-align: center;
   color: white;
 }
 
+#vitor-link {
+  color: #ffce31;
+}
+
+#raul-link {
+  color: rgb(200, 25, 25);
+}
+
 #footer-api {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  width: 140px;
 }
 
 #api-logo {
   background-image: url(./images/pokeapi.png);
   height: 60px;
-  width: 90%;
+  width: 100px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -165,7 +175,7 @@ ul#nav-links {
   align-items: center;
   font-size: 5em;
   color: white;
-  height: calc(100vh - 155px);
+  height: calc(100vh - 190px);
   background-color: green;
   width: 100%;
 }
@@ -178,7 +188,8 @@ ul#nav-links {
   cursor: pointer;
   grid-column: span 4;
   display: flex;
-  height: 280px;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -644,7 +655,7 @@ div.individual-modal-card h4 {
   padding: 1%;
   font-size: 5em;
   color: white;
-  height: calc(100vh - 155px);
+  height: calc(100vh - 190px);
   background-image: url(images/main-backgroun-day.jpg);
   background-size: cover;
   background-position: 100% 50%;
@@ -661,7 +672,21 @@ div.individual-modal-card h4 {
 #pokemon-container.reduce-grid {
   grid-template-columns: 1fr;
   overflow-y: auto;
-  height: calc(100vh - 155px);
+  height: calc(100vh - 190px);
+  background-image: url(images/blackbg.jpg);
+}
+
+#pokemon-container.reduce-grid .pokemon {
+  grid-column: span 4;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-image: radial-gradient(transparent, rgba(255, 255, 0, 0.142));
+  transition-duration: 0ms;
+  color: rgb(255, 237, 237);
 }
 
 .pokedex-box-image {
@@ -669,7 +694,7 @@ div.individual-modal-card h4 {
   align-items: center;
   height: 100%;
   width: 100%;
-  background-image: url(images/pokedex-full.png);
+  background-image: url(images/pokedexnew\ copy.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
