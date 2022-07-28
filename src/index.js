@@ -3,9 +3,10 @@ import displayPokemons from './modules/displayPokemons';
 import fetchApi from './modules/fetchApiPokemon';
 import spa from './modules/singlePageApp';
 import displayPokedex from './modules/displayPokedex';
-import cleanPokedex from './modules/cleanModal';
+import cleanPokedex from './modules/cleanPokedex';
 
 spa();
+
 document.addEventListener('DOMContentLoaded', async () => {
   const res = await fetchApi();
   const pokemonsArray = res.results;
@@ -31,13 +32,14 @@ document.addEventListener('click', (event) => {
 // pokemon number
 let pokemonNumber = 0
 // BACK and NEXT buttons
-const backBtn = document.querySelector('#btn1')
-const nextBtn = document.querySelector('#btn2')
+const backBtn = document.querySelector('.btn1')
+const nextBtn = document.querySelector('.btn2')
 backBtn.addEventListener('click', async () => {
   const res = await fetchApi();
   const pokemonsArray = res.results;
   if(pokemonNumber !== 0) {
       pokemonNumber -= 1
+      await cleanPokedex();
       displayPokedex(pokemonsArray, pokemonNumber)
       console.log(pokemonNumber)
   }
@@ -46,8 +48,9 @@ backBtn.addEventListener('click', async () => {
 nextBtn.addEventListener('click', async () => {
   const res = await fetchApi();
   const pokemonsArray = res.results;
-  if(pokemonNumber !== 150) {
+  if(pokemonNumber !== 151) {
       pokemonNumber += 1
+      await cleanPokedex();
       displayPokedex(pokemonsArray, pokemonNumber)
       console.log(pokemonNumber)
   }

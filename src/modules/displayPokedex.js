@@ -41,7 +41,8 @@ export default async function displayPokedex(pokemonArr, pokemonNumber) {
       });
     pokedexSection.appendChild(pokeTypes);
 
-
-
-
+    //microverse title
+    const microverseTitle = document.createElement('h2');
+    microverseTitle.className = 'microverse-title';
+    pokedexSection.appendChild(microverseTitle);
 }

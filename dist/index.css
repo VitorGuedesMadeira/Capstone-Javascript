@@ -790,6 +790,7 @@ div.individual-modal-card h4 {
   position: absolute;
   top: 50px;
   right: -10px;
+  z-index: 5;
 }
 
 @keyframes pokedex-night-day {

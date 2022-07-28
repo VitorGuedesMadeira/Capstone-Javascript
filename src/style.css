@@ -698,7 +698,7 @@ div.individual-modal-card h4 {
   padding: 20px;
 }
 
-#btn1 {
+.btn1 {
   background-color: rgb(70, 75, 80);
   color: white;
   font-weight: 300;
@@ -714,7 +714,7 @@ div.individual-modal-card h4 {
   left: 60px;
 }
 
-#btn2 {
+.btn2 {
   background-color: rgb(70, 75, 80);
   color: white;
   font-weight: 300;
@@ -730,8 +730,8 @@ div.individual-modal-card h4 {
   left: 175px;
 }
 
-#btn1:active,
-#btn2:active {
+.btn1:active,
+.btn2:active {
   box-shadow: inset -2px 2px 0 rgb(56, 1, 1), inset -6px 6px 0 rgba(0, 0, 0, 0.2);
   font-size: 0.9em;
 }
@@ -790,6 +790,7 @@ div.individual-modal-card h4 {
   position: absolute;
   top: 50px;
   right: -10px;
+  z-index: 5;
 }
 
 @keyframes pokedex-night-day {
@@ -909,11 +910,11 @@ div.individual-modal-card h4 {
     height: auto;
   }
 
-  #btn1 {
+  .btn1 {
     position: static;
   }
 
-  #btn2 {
+  .btn2 {
     position: static;
   }
 
