@@ -844,6 +844,14 @@ div.individual-modal-card h4 {
 }
 
 @media screen and (min-width: 1440px) {
+  .pokemon {
+    grid-column: span 3;
+  }
+
+  #pokemon-container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
   .pokedex {
     height: 600px;
   }
