@@ -174,15 +174,15 @@ ul#nav-links {
 
 #pokeball-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   font-size: 5em;
   color: white;
   height: calc(100vh - 190px);
-  background-color: green;
+  background-image: url(images/blackbg.jpg);
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
+  gap: 100px;
 }
 
 #pokeball-container.hide {
