@@ -33,7 +33,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #000000e6;
-  z-index: 9;
+  z-index: 10;
 }
 
 nav {
@@ -47,12 +47,14 @@ main {
   background-image: url(images/pokemon-background.jpg);
   background-attachment: fixed;
   background-size: cover;
+  overflow: hidden;
 }
 
 footer {
   background-color: #000000e6;
   color: rgb(217, 217, 217);
   height: 90px;
+  z-index: 10;
 }
 
 #nav-container,
@@ -62,6 +64,7 @@ footer {
   width: 80%;
   justify-content: space-around;
   align-items: center;
+  z-index: 10;
 }
 
 #nav-logo {
@@ -652,21 +655,12 @@ div.individual-modal-card h4 {
 /* ------ POKEDÉX SECTION ------ */
 
 #pokedex-container {
-  padding: 1%;
-  font-size: 5em;
-  color: white;
   height: calc(100vh - 190px);
   background-image: url(images/main-backgroun-day.jpg);
   background-size: cover;
   background-position: 100% 50%;
-  width: 100%;
   position: relative;
   animation: background-night-day 45s infinite;
-}
-
-.pokedextesting {
-  width: 50px;
-  height: 50px;
 }
 
 #pokemon-container.reduce-grid {
@@ -689,35 +683,40 @@ div.individual-modal-card h4 {
   color: rgb(255, 237, 237);
 }
 
-.pokedex-box-image {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-image: url(images/pokedexnew\ copy.png);
-  background-size: contain;
+.pokedex {
+  height: 450px;
+  width: auto;
+  position: absolute;
+  padding: 20px;
+}
+
+.microverse-title {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-image: url(images/microverse.png);
   background-repeat: no-repeat;
-  position: relative;
-}
-
-.microverse-title-border {
-  font-family: 'pokemon-border', sans-serif;
-  font-size: 110%;
-  position: absolute;
-  right: 5%;
-  top: -10%;
-  color: rgb(10, 10, 105);
+  background-size: contain;
+  height: 100px;
+  width: 500px;
   z-index: 1;
-  text-shadow: -3px 3px rgb(3, 3, 51);
 }
 
-.microverse-title-solid {
-  font-family: 'pokemon-solid', sans-serif;
-  font-size: 110%;
+.pokedex-pokemon-inside {
+  height: 80px;
+  width: auto;
   position: absolute;
-  right: 5%;
-  top: -10%;
-  color: #fecd30;
+  top: 160px;
+  left: 125px;
+}
+
+.pokedex-pokemon-outside {
+  height: 400px;
+  width: auto;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 1;
 }
 
 @keyframes background-night-day {
@@ -725,7 +724,11 @@ div.individual-modal-card h4 {
     background-image: url(images/main-backgroun-day.jpg);
   }
 
-  50% {
+  40% {
+    background-image: url(images/main-background-night.jpg);
+  }
+
+  60% {
     background-image: url(images/main-background-night.jpg);
   }
 
@@ -734,19 +737,35 @@ div.individual-modal-card h4 {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .microverse-title-solid {
-    font-size: 90%;
-    top: -5%;
+@keyframes light {
+  0% {
+    opacity: 0%;
   }
 
-  .microverse-title-border {
-    top: -5%;
-    font-size: 90%;
+  50% {
+    opacity: 30%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #pokemon-container.reduce-grid {
+    display: none;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .microverse-title {
+    display: none;
+  }
+
+  .pokedex-pokemon-outside {
+    display: none;
+  }
+
   ul#nav-links {
     font-size: 12px;
     width: 70%;
@@ -767,10 +786,6 @@ div.individual-modal-card h4 {
   }
 
   .individual-modal-card {
-    display: none;
-  }
-
-  #pokemon-container.reduce-grid {
     display: none;
   }
 
@@ -798,7 +813,7 @@ div.individual-modal-card h4 {
     grid-column: span 12;
   }
 
-  .pokedex-box-image {
+  .pokedex {
     background-image: url(images/pokedex-mobile.png);
   }
 }

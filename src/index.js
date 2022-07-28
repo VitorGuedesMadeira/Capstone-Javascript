@@ -2,6 +2,7 @@ import './style.css';
 import displayPokemons from './modules/displayPokemons';
 import fetchApi from './modules/fetchApiPokemon';
 import spa from './modules/singlePageApp';
+import displayPokedex from './modules/displayPokedex';
 
 spa();
 document.addEventListener('DOMContentLoaded', async () => {
@@ -15,6 +16,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const pokemonUrl = await url.json();
     displayPokemons(pokemonUrl);
   });
+
+  displayPokedex(pokemonsArray)
 });
 
 document.addEventListener('click', (event) => {
