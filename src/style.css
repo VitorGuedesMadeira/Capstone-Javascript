@@ -181,6 +181,8 @@ ul#nav-links {
   height: calc(100vh - 190px);
   background-color: green;
   width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 #pokeball-container.hide {
@@ -277,6 +279,7 @@ ul#nav-links {
   justify-content: center;
   align-items: center;
   -webkit-backdrop-filter: blur(5px);
+  z-index: 30;
   backdrop-filter: blur(5px);
 }
 
@@ -294,7 +297,7 @@ div.modal {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  z-index: 27;
+  z-index: 30;
   padding: 25px;
   gap: 10px;
 }
@@ -673,8 +676,8 @@ div.individual-modal-card h4 {
 #pokemon-container.reduce-grid .pokemon {
   grid-column: span 4;
   display: flex;
-  height: 100%;
-  width: 100%;
+  height: 230px;
+  width: 230px;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
@@ -683,11 +686,54 @@ div.individual-modal-card h4 {
   color: rgb(255, 237, 237);
 }
 
+#pokemon-container.reduce-grid .pokemon img {
+  width: 100px;
+  height: 100px;
+}
+
 .pokedex {
   height: 450px;
   width: auto;
   position: absolute;
   padding: 20px;
+}
+
+#btn1 {
+  background-color: rgb(70, 75, 80);
+  color: white;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 10px 35px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: -1px 2px 0 black, -4px 6px 0 rgba(0, 0, 0, 0.225);
+  cursor: pointer;
+  z-index: 20;
+  position: absolute;
+  top: 350px;
+  left: 60px;
+}
+
+#btn2 {
+  background-color: rgb(70, 75, 80);
+  color: white;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 10px 35px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: -1px 2px 0 black, -4px 6px 0 rgba(0, 0, 0, 0.225);
+  cursor: pointer;
+  z-index: 20;
+  position: absolute;
+  top: 350px;
+  left: 175px;
+}
+
+#btn1:active,
+#btn2:active {
+  box-shadow: inset -2px 2px 0 rgb(56, 1, 1), inset -6px 6px 0 rgba(0, 0, 0, 0.2);
+  font-size: 0.9em;
 }
 
 .microverse-title {
@@ -702,6 +748,16 @@ div.individual-modal-card h4 {
   z-index: 1;
 }
 
+.pokedex-light {
+  position: absolute;
+  height: 175px;
+  width: 175px;
+  top: -20px;
+  left: 0;
+  animation: light 0.5s infinite;
+  z-index: 30;
+}
+
 .pokedex-pokemon-inside {
   height: 80px;
   width: auto;
@@ -710,13 +766,48 @@ div.individual-modal-card h4 {
   left: 125px;
 }
 
+.pokedex-pokemon-name {
+  font-family: 'calculator', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  top: 165px;
+  left: 385px;
+  color: rgb(114, 210, 160);
+}
+
+.pokedex-pokemon-type {
+  font-family: 'calculator', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  top: 190px;
+  left: 385px;
+  color: rgb(114, 210, 160);
+}
+
 .pokedex-pokemon-outside {
   height: 400px;
   width: auto;
   position: absolute;
   top: 50px;
   right: -10px;
-  z-index: 1;
+}
+
+@keyframes pokedex-night-day {
+  0% {
+    content: url(images/pokedex.png);
+  }
+
+  40% {
+    content: url(images/pokedexnewNight.png);
+  }
+
+  60% {
+    content: url(images/pokedexnewNight.png);
+  }
+
+  100% {
+    content: url(images/pokedex.png);
+  }
 }
 
 @keyframes background-night-day {
@@ -743,7 +834,7 @@ div.individual-modal-card h4 {
   }
 
   50% {
-    opacity: 30%;
+    opacity: 50%;
   }
 
   100% {
@@ -804,19 +895,46 @@ div.individual-modal-card h4 {
     overflow-y: auto;
   }
 
+  #pokedex-container {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .pokedex {
     content: url('../src/images/pokedex-mobile.png');
     width: 325px;
-    height: 100%;
-    left: 25px;
+    height: auto;
+  }
+
+  #btn1 {
+    position: static;
+  }
+
+  #btn2 {
+    position: static;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 95%;
   }
 
   .pokedex-pokemon-inside {
-    height: 50px;
-    width: auto;
     position: absolute;
-    top: 95px;
-    left: 70px;
+    left: 40%;
+    top: 155px;
+    height: 90px;
+    width: auto;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

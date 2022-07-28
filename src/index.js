@@ -3,6 +3,7 @@ import displayPokemons from './modules/displayPokemons';
 import fetchApi from './modules/fetchApiPokemon';
 import spa from './modules/singlePageApp';
 import displayPokedex from './modules/displayPokedex';
+import cleanPokedex from './modules/cleanModal';
 
 spa();
 document.addEventListener('DOMContentLoaded', async () => {
@@ -16,8 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const pokemonUrl = await url.json();
     displayPokemons(pokemonUrl);
   });
-
-  displayPokedex(pokemonsArray)
+  displayPokedex(pokemonsArray, 0)
 });
 
 document.addEventListener('click', (event) => {
@@ -27,3 +27,28 @@ document.addEventListener('click', (event) => {
     modalContainer.classList.remove('show-modal');
   }
 });
+
+// pokemon number
+let pokemonNumber = 0
+// BACK and NEXT buttons
+const backBtn = document.querySelector('#btn1')
+const nextBtn = document.querySelector('#btn2')
+backBtn.addEventListener('click', async () => {
+  const res = await fetchApi();
+  const pokemonsArray = res.results;
+  if(pokemonNumber !== 0) {
+      pokemonNumber -= 1
+      displayPokedex(pokemonsArray, pokemonNumber)
+      console.log(pokemonNumber)
+  }
+})
+
+nextBtn.addEventListener('click', async () => {
+  const res = await fetchApi();
+  const pokemonsArray = res.results;
+  if(pokemonNumber !== 150) {
+      pokemonNumber += 1
+      displayPokedex(pokemonsArray, pokemonNumber)
+      console.log(pokemonNumber)
+  }
+})
