@@ -48,7 +48,7 @@ backBtn.addEventListener('click', async () => {
 nextBtn.addEventListener('click', async () => {
   const res = await fetchApi();
   const pokemonsArray = res.results;
-  if(pokemonNumber !== 151) {
+  if(pokemonNumber < 150) {
       pokemonNumber += 1
       await cleanPokedex();
       displayPokedex(pokemonsArray, pokemonNumber)

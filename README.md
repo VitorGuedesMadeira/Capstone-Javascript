@@ -18,6 +18,7 @@
 - [Involvement API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270) for likes and comments
 
 ## Quick view
+![](./src/images/printreadme.png)
 ![](./src/images/quickView.png)
 
 ## Live demo
