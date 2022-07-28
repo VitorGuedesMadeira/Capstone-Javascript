@@ -13,8 +13,18 @@
 - **Webpack:**  Source development for production bundling.
 - **Linters Check:** Local and Pull Request Github workflows to check for stylistic errors, bugs and syntax errors in code.
 
+# API's
+- [pokemon API](https://pokeapi.co/) for content
+- [Involvement API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270) for likes and comments
+
 ## Quick view
-Insert Screenshot Here
+![](./src/images/quickView.png)
+
+## Live demo
+click here to see the [live demo](https://vitorguedesmadeira.github.io/Capstone-Javascript/dist/)
+
+## Project description video
+[youtube video link](https://youtu.be/zLjGvqVCOUI)
 
 ## Setup
 

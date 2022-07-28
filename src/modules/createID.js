@@ -7,7 +7,6 @@ const createId = async () => {
       'Content-Type': 'application/json',
     },
   }).then((data) => data.text());
-  console.log(novoId);
   return novoId;
 };
 

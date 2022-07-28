@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'pokemon-solid';
-  src: url(fonts/Pokemon\ Solid.ttf);
+  src: url(5d60be1f7ff5fcc21fc1.ttf);
 }
 
 @font-face {
   font-family: 'pokemon-border';
-  src: url(fonts/Pokemon\ Hollow.ttf);
+  src: url(47f77ce9939c5330492b.ttf);
 }
 
 @font-face {
   font-family: 'calculator';
-  src: url(fonts/Calculator.ttf);
+  src: url(5b0ae8cafe5f1cb0de81.ttf);
 }
 
 * {
@@ -44,7 +44,7 @@ nav {
 main {
   display: flex;
   justify-content: center;
-  background-image: url(images/pokemon-background.jpg);
+  background-image: url(4f88f82418c8700aed54.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -64,7 +64,7 @@ footer {
 }
 
 #nav-logo {
-  background-image: url(./images/pokedex-title.png);
+  background-image: url(7368082a20ef1fad3746.png);
   height: 70px;
   width: 30%;
   background-size: contain;
@@ -135,7 +135,7 @@ ul#nav-links {
 }
 
 #api-logo {
-  background-image: url(./images/pokeapi.png);
+  background-image: url(888baca4809420be1126.png);
   height: 60px;
   width: 90%;
   background-size: contain;
@@ -288,7 +288,7 @@ div.modal {
 .individual-modal-card {
   min-height: 500px;
   min-width: 355px;
-  background-image: url(cardsImage/incolor.png);
+  background-image: url(35bfae2e40b1f61993e1.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -297,51 +297,51 @@ div.modal {
 }
 
 .individual-modal-card.fire-card {
-  background-image: url(cardsImage/fire.png);
+  background-image: url(0e6bce8dc46420dc1ae8.png);
 }
 
 .individual-modal-card.grass-card {
-  background-image: url(cardsImage/grass.png);
+  background-image: url(3301108b94063f754496.png);
 }
 
 .individual-modal-card.poison-card {
-  background-image: url(cardsImage/poison.png);
+  background-image: url(ef91ac3332caa702c474.png);
 }
 
 .individual-modal-card.water-card {
-  background-image: url(cardsImage/water.png);
+  background-image: url(2e22e8a4ed602b6914aa.png);
 }
 
 .individual-modal-card.electric-card {
-  background-image: url(cardsImage/electric.png);
+  background-image: url(f213a59a870b569d74ff.png);
 }
 
 .individual-modal-card.fairy-card {
-  background-image: url(cardsImage/fairy.png);
+  background-image: url(9d3d698d54960cec8143.png);
 }
 
 .individual-modal-card.fight-card {
-  background-image: url(cardsImage/fight.png);
+  background-image: url(17324acfcc9dc23c21ff.png);
 }
 
 .individual-modal-card.dragon-card {
-  background-image: url(cardsImage/dragon.png);
+  background-image: url(d2f86e09a20dd4147680.png);
 }
 
 .individual-modal-card.metal-card {
-  background-image: url(cardsImage/metal.png);
+  background-image: url(4dec502d1bb481890e6a.png);
 }
 
 .individual-modal-card.psychiq-card {
-  background-image: url(cardsImage/psychiq.png);
+  background-image: url(8a03bfcf205f6c6f9232.png);
 }
 
 .individual-modal-card.incolor-card {
-  background-image: url(cardsImage/incolor.png);
+  background-image: url(35bfae2e40b1f61993e1.png);
 }
 
 .individual-modal-card.ice-card {
-  background-image: url(cardsImage/ice.png);
+  background-image: url(46512f34afedfdcf14d3.png);
 }
 
 .modal h4 {
@@ -645,7 +645,7 @@ div.individual-modal-card h4 {
   font-size: 5em;
   color: white;
   height: calc(100vh - 155px);
-  background-image: url(images/main-backgroun-day.jpg);
+  background-image: url(5fd4646c42df4c4f37d0.jpg);
   background-size: cover;
   background-position: 100% 50%;
   width: 100%;
@@ -669,7 +669,7 @@ div.individual-modal-card h4 {
   align-items: center;
   height: 100%;
   width: 100%;
-  background-image: url(images/pokedex-full.png);
+  background-image: url(688a35b158aef1a9aa74.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
@@ -697,15 +697,15 @@ div.individual-modal-card h4 {
 
 @keyframes background-night-day {
   0% {
-    background-image: url(images/main-backgroun-day.jpg);
+    background-image: url(5fd4646c42df4c4f37d0.jpg);
   }
 
   50% {
-    background-image: url(images/main-background-night.jpg);
+    background-image: url(564756af9182acd84735.jpg);
   }
 
   100% {
-    background-image: url(images/main-backgroun-day.jpg);
+    background-image: url(5fd4646c42df4c4f37d0.jpg);
   }
 }
 
@@ -774,6 +774,7 @@ div.individual-modal-card h4 {
   }
 
   .pokedex-box-image {
-    background-image: url(images/pokedex-mobile.png);
+    background-image: url(c462449a52a83d331900.png);
   }
 }
+
