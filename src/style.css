@@ -844,6 +844,12 @@ div.individual-modal-card h4 {
 }
 
 @media screen and (min-width: 1440px) {
+  #pokemon-container.reduce-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .pokemon {
     grid-column: span 3;
   }
@@ -900,6 +906,12 @@ div.individual-modal-card h4 {
 }
 
 @media screen and (min-width: 1920px) {
+  #pokemon-container.reduce-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .pokemon {
     grid-column: span 3;
   }
