@@ -844,6 +844,12 @@ div.individual-modal-card h4 {
 }
 
 @media screen and (min-width: 1440px) {
+  #pokemon-container.reduce-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .pokemon {
     grid-column: span 3;
   }
@@ -870,6 +876,12 @@ div.individual-modal-card h4 {
     font-size: 20px;
     left: 230px;
     top: 470px;
+  }
+
+  .btn1:active,
+  .btn2:active {
+    box-shadow: inset -2px 2px 0 rgb(56, 1, 1), inset -6px 6px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1.3em;
   }
 
   .pokedex-pokemon-outside {
@@ -900,6 +912,12 @@ div.individual-modal-card h4 {
 }
 
 @media screen and (min-width: 1920px) {
+  #pokemon-container.reduce-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .pokemon {
     grid-column: span 3;
   }
@@ -929,6 +947,12 @@ div.individual-modal-card h4 {
     font-size: 40px;
     left: 305px;
     top: 640px;
+  }
+
+  .btn1:active,
+  .btn2:active {
+    box-shadow: inset -2px 2px 0 rgb(56, 1, 1), inset -6px 6px 0 rgba(0, 0, 0, 0.2);
+    font-size: 2.3em;
   }
 
   .pokedex-pokemon-outside {
@@ -1066,6 +1090,10 @@ div.individual-modal-card h4 {
     z-index: 10;
     left: 35%;
     top: 500px;
+  }
+
+  .pokedex-light {
+    display: none;
   }
 }
 
