@@ -878,6 +878,12 @@ div.individual-modal-card h4 {
     top: 470px;
   }
 
+  .btn1:active,
+  .btn2:active {
+    box-shadow: inset -2px 2px 0 rgb(56, 1, 1), inset -6px 6px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1.3em;
+  }
+
   .pokedex-pokemon-outside {
     height: 500px;
   }
@@ -941,6 +947,12 @@ div.individual-modal-card h4 {
     font-size: 40px;
     left: 305px;
     top: 640px;
+  }
+
+  .btn1:active,
+  .btn2:active {
+    box-shadow: inset -2px 2px 0 rgb(56, 1, 1), inset -6px 6px 0 rgba(0, 0, 0, 0.2);
+    font-size: 2.3em;
   }
 
   .pokedex-pokemon-outside {
