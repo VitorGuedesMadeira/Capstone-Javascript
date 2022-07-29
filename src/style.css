@@ -899,6 +899,66 @@ div.individual-modal-card h4 {
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .pokemon {
+    grid-column: span 3;
+  }
+
+  #pokemon-container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .pokedex {
+    height: 800px;
+  }
+
+  .microverse-title {
+    height: 150px;
+    width: 100%;
+    left: 600px;
+    top: 100px;
+  }
+
+  .btn1 {
+    font-size: 40px;
+    left: 130px;
+    top: 640px;
+  }
+
+  .btn2 {
+    font-size: 40px;
+    left: 305px;
+    top: 640px;
+  }
+
+  .pokedex-pokemon-outside {
+    height: 650px;
+  }
+
+  .pokedex-pokemon-inside {
+    height: 160px;
+    top: 270px;
+    left: 230px;
+  }
+
+  .pokedex-light {
+    top: 0;
+    left: 45px;
+  }
+
+  .pokedex-pokemon-name {
+    font-size: 48px;
+    top: 280px;
+    left: 680px;
+  }
+
+  .pokedex-pokemon-type {
+    font-size: 48px;
+    top: 335px;
+    left: 680px;
+  }
+}
+
 @media screen and (max-width: 1150px) {
   #pokemon-container.reduce-grid {
     display: none;
