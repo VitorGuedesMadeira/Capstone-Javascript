@@ -55,3 +55,14 @@ nextBtn.addEventListener('click', async () => {
       console.log(pokemonNumber)
   }
 })
+
+const navLinks = document.querySelector('#nav-links');
+const hamburgerIcon = document.querySelector('#hamburger-icon');
+const nav = document.querySelector('#navigation-bar');
+hamburgerIcon.addEventListener('click', () => {
+    nav.classList.toggle('hamburger');
+})
+
+navLinks.addEventListener('click', () => {
+    nav.classList.remove('hamburger');
+})

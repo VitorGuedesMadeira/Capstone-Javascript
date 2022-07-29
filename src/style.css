@@ -76,6 +76,14 @@ footer {
   background-position: center;
 }
 
+#hamburger-icon {
+  background-image: url(./images/5a38400bb45730.3526330915136358517387.png);
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  display: none;
+}
+
 ul#nav-links {
   display: flex;
   width: 50%;
@@ -1098,6 +1106,47 @@ div.individual-modal-card h4 {
 }
 
 @media screen and (max-width: 480px) {
+  #nav-logo {
+    display: flex;
+  }
+
+  #nav-links li {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: flex;
+    background-repeat: no-repeat;
+    align-items: center;
+  }
+
+  #navigation-bar.hamburger {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgb(20, 0, 0);
+    z-index: 999;
+  }
+
+  #navigation-bar.hamburger #nav-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navigation-bar.hamburger #hamburger-icon {
+    display: none;
+  }
+
+  #navigation-bar.hamburger #nav-links li {
+    display: flex;
+    text-align: center;
+  }
+
+  #navigation-bar.hamburger #nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
   #pokemon-container {
     grid-template-columns: repeat(12, 1fr);
     height: 100%;
