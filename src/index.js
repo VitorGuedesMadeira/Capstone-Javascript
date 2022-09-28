@@ -6,7 +6,7 @@ import spa from './singlePageApp';
 spa();
 document.addEventListener('DOMContentLoaded', async () => {
   const res = await fetchApi();
-  console.log(res)
+  console.log(res);
   const pokemonsArray = res.results;
   const pokemonsCounter = document.querySelector('#pokemons-counter');
   pokemonsCounter.textContent = pokemonsArray.length;
